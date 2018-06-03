@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome in Angular ToDo Single Page Progressive Web App!</h1>
+        <div ng-if="!isAuthenticated()">
+            <p>Log in to get started.</p>
+            <a class="btn btn-primary btn-large" href="#/login">Login</a>
+        </div>
+        <div ng-if="isAuthenticated()">
+            <p>Create your ToDos!</p>
+            <a class="btn btn-primary btn-large" href="#/mytodos">My ToDos</a>
+        </div>
+
+    </div>
+</div>
