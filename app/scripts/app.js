@@ -18,7 +18,7 @@ var app = angular
     'ngTouch',
     'ngStorage'
   ])
-  .config(function ($routeProvider, $locationProvider, authServiceProvider) {
+  .config(function ($routeProvider, $locationProvider, authServiceProvider, todoServiceProvider) {
     $locationProvider.hashPrefix('');
     $routeProvider
       .when('/', {
@@ -46,6 +46,8 @@ var app = angular
       });
 
       authServiceProvider.config('http://localhost:3000'); //config api url
+      todoServiceProvider.config('http://localhost:3000'); 
+
 
   }).run(function($rootScope, $http, $location, $localStorage){
     // keep user logged in after page refresh

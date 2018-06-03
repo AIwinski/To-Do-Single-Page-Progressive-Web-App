@@ -1,1 +1,10 @@
-<p>This is the mytodos view.</p>
+<div class="container">
+
+    <div class="input-group" style="width: 100%;">
+        <input ng-keyup="$event.keyCode == 13 && addToDo()" ng-model="newToDo" class="form-control" placeholder="Type your todos here!">
+    </div>
+
+    <div class="panel panel-default" ng-repeat="td in todos" style="margin: 0;">
+        <todo></todo>
+    </div>       
+</div>

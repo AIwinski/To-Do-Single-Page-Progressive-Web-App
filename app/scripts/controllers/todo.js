@@ -2,15 +2,14 @@
 
 /**
  * @ngdoc function
- * @name todoApplicationApp.controller:NavbarCtrl
+ * @name todoApplicationApp.controller:TodoCtrl
  * @description
- * # RegisterCtrl
+ * # TodoCtrl
  * Controller of the todoApplicationApp
  */
-angular.module('todoApplicationApp')
-  .controller('NavbarCtrl', function ($scope, $localStorage, authService, $rootScope) {
+app.controller('TodoCtrl', function ($scope, $localStorage, authService, $rootScope) {
     if($localStorage.currentUser){
-        console.log($localStorage.currentUser)
+        //console.log($localStorage.currentUser)
         $rootScope.nickname = $localStorage.currentUser.email;
     } else {
         $rootScope.nickname = '';
@@ -22,4 +21,4 @@ angular.module('todoApplicationApp')
         authService.logout();
     }
     
-  });
+});
