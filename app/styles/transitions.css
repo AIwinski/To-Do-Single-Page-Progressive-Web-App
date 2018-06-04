@@ -1,0 +1,15 @@
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.5); }
+}
+
+.ng-enter { animation: slideOutLeft 0.5s both ease-out; z-index: 8888; }
+.ng-leave { animation: slideInRight 0.5s both ease-in; z-index: 9999; }

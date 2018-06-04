@@ -36,12 +36,12 @@
             });
         }
 
-        todoservice.deleteToDO = function(){
+        todoservice.deleteToDo = function(id){
             if(!$localStorage.currentUser){
                 return;
             }
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.currentUser.token;
-            return $http.delete(API_URL + '/todos/');
+            return $http.delete(API_URL + '/todos/' + id);
         }
       
       return todoservice; 
