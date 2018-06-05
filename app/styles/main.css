@@ -81,3 +81,13 @@ body {
     border-bottom: 0;
   }
 }
+
+.completed {
+    background: #d6dde4;
+    text-decoration: line-through;
+}
+
+.active {
+  background: #d2e7ff;
+  color: #960000
+}

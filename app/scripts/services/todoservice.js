@@ -43,6 +43,14 @@
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.currentUser.token;
             return $http.delete(API_URL + '/todos/' + id);
         }
+
+        todoservice.editToDo = function(id, data){
+            if(!$localStorage.currentUser){
+                return;
+            }
+            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.currentUser.token;
+            return $http.patch(API_URL + '/todos/' + id, data);
+        }
       
       return todoservice; 
     }];

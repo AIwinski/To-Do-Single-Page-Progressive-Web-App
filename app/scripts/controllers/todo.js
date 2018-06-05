@@ -20,4 +20,14 @@ app.controller('TodoCtrl', function ($scope, todoService) {
             }
         });
     }    
+
+    $scope.markAsDone = function(){
+        var id = thisTodo._id;
+        var completed = !thisTodo.completed;
+        todoService.editToDo(id, {completed: completed}).then(response => {
+            if(response.status === 200){
+                $scope.$parent.todos[$scope.$index].completed = completed;
+            }
+        });
+    }
 });

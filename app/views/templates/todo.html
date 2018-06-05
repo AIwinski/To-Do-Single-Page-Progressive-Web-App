@@ -1,6 +1,6 @@
-<div class="panel-body" id="{{td._id}}">
+<div class="panel-body" id="{{td._id}}" ng-class="td.completed ? 'completed' : 'active' ">
     <span>
-        <button class="btn btn-sm btn-info" ng-click="">Done</button>
+        <button class="btn btn-sm btn-info" ng-click="markAsDone()">Done</button>
         <button class="btn btn-sm btn-danger" ng-click="delete()">Delete</button>
         <p style="display: inline; word-wrap: break-word;">{{td.text}}</p>
     </span>
